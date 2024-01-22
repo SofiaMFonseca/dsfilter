@@ -1,3 +1,5 @@
+# Design Figma for the project [here](https://www.figma.com/file/s21JDtjv3cRyUfetFYAzIJ/DSFilter)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
