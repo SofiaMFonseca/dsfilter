@@ -1,8 +1,9 @@
 import FilterCard from "../FilterCard";
 import ListingCard from "../ListingCard";
 import { ProductDTO } from "../../models/product";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as productService from '../../services/product-service';
+import { ContextProductCount } from "../../utils/context-products";
 
 type QueryParams = {
     priceMin: number;
@@ -18,18 +19,21 @@ function ListingBody() {
         priceMax: Number.MAX_VALUE
     });
 
+    const { setContextProductCount } = useContext(ContextProductCount);
+
     useEffect(() => {
         const products = productService.findByPrice(queryParams.priceMin, queryParams.priceMax);
         setProducts(products);
+        setContextProductCount(products.length);
     }, [queryParams]);
 
     function handleFilter(min: number, max: number) {
-        setQueryParams({priceMin: min || 0, priceMax: max || Number.MAX_VALUE});
+        setQueryParams({ priceMin: min || 0, priceMax: max || Number.MAX_VALUE });
     }
 
     return (
         <main>
-            <div>
+            <div className="dsf-padding-body">
                 <FilterCard onFilter={handleFilter} />
                 <ListingCard products={products} />
             </div>

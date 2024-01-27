@@ -8,7 +8,7 @@ type Props = {
 function ListingCard({ products }: Props) {
 
     return (
-        <div className="dsf-listing-card dsf-container dsf-mb20">
+        <div className="dsf-listing-card dsf-container">
             {
                 products.map(product =>
                     <>

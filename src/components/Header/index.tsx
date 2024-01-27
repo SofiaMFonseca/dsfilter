@@ -1,12 +1,16 @@
 import './styles.css';
+import { useContext } from 'react';
+import { ContextProductCount } from '../../utils/context-products';
 
 function Header() {
 
+    const { contextProductCount } = useContext(ContextProductCount);
+
     return (
-        <header className='dsf-mb20'>
+        <header>
             <nav className='dsf-container'>
                 <h1>DSFilter</h1>
-                <h2>n produto(s)</h2>
+                <h2>{contextProductCount} produto(s)</h2>
             </nav>
         </header>
     );
