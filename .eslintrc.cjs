@@ -14,5 +14,19 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+          "types": {
+              "Bar": "Don't use Bar because it is unsafe",
+              "Person": {
+                  "message": "Person is too generic!",
+                  "fixWith": "Employee"
+              },
+              "Function": false
+          },
+          "extendDefaults": true
+      }
+  ]
   },
 }

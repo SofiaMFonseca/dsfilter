@@ -11,12 +11,10 @@ function ListingCard({ products }: Props) {
         <div className="dsf-listing-card dsf-container">
             {
                 products.map(product =>
-                    <>
-                        <div className='dsf-listing-card-unit' key={product.id}>
-                            <h4>{product.name}</h4>
-                            <h3>R$ {product.price.toFixed(2)}</h3>
-                        </div>
-                    </>
+                    <div className='dsf-listing-card-unit' key={product.id}>
+                        <h4>{product.name}</h4>
+                        <h3>R$ {product.price.toFixed(2)}</h3>
+                    </div>
                 )
             }
         </div>
