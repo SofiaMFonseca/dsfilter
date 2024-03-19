@@ -1,5 +1,28 @@
 # Design Figma for the project [here](https://www.figma.com/file/s21JDtjv3cRyUfetFYAzIJ/DSFilter)
 
+## Use Case: List Products
+
+1. [OUT] The system informs the name and price of all products, sorted by price. 
+2. [IN] The user optionally informs the minimum price and maximum price of the products.
+3. [OUT] The system informs the name and price of the products, sorted by price, according to criteria.
+ 
+Additional information: 
+- You don't need to do form validation (assume that the user is going to enter valid values).
+- You don't need to implement routes (you can mount the entire screen in the App). 
+- If the value of the minimum price is not informed, use the value 0 (zero) by default. 
+- If the maximum price value is not entered, use the value Number.MAX_VALUE by default.
+
+## Correction criteria for this task:
+
+1) The project should contain the main components (there can be others as you like): 
+    - Header 
+    - ListingBody screen 
+    - Filter card 
+    - Listing card 
+2) The product list should be passed as a Prop to the listing card. 
+3) The filter card should emit an onFilter(min, max) event. This event serves to communicate the minimum and maximum prices each time the form is submitted. 
+4) Context API used to maintain the global state of the number of products shown on the screen. Whenever a new filter is made and the number of products listed changes, the number must be updated in the header.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
