@@ -23,6 +23,10 @@ Additional information:
 3) The filter card should emit an onFilter(min, max) event. This event serves to communicate the minimum and maximum prices each time the form is submitted. 
 4) Context API used to maintain the global state of the number of products shown on the screen. Whenever a new filter is made and the number of products listed changes, the number must be updated in the header.
 
+## Layout
+
+![Figma](https://github.com/SofiaMFonseca/assets/blob/main/dsfilter/figma-task-dsfilter.png)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
